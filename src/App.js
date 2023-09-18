@@ -33,10 +33,17 @@ const App = () => {
   return (
     <>
       <h1>Treasure Hunt Game</h1>
-      <Square board={board} handleClick={handleClick}/>
+
+      <Square board={board}/>
+
 
     </>
   )
 }
 
 export default App
+
+
+
+
+
