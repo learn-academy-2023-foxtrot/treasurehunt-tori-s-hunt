@@ -1,26 +1,29 @@
 import React from "react"
 
 
-const Square = ({board}) => {
+const Square = ({board, handleClick}) => {
   // console.log("props", props.board) //output: 
   //when using props as the parameter requires dot notation to obtain a specific key
   //destruture a specific property
   // {board} - referencing the name assigned to the prop passed from App.js
   console.log("board", board);
 
-  return (
-    <>
-      <div className="grid">
-      {board.map((value, index)=> {
-        return(
-          <div className="square" key={index}>
+    return (
+      <>
+        <div className="grid">
+          {board.map((value, index) => {
+            return (
+          <div 
+          className="square" 
+          key={index}
+          onClick={() => handleClick(index)}
+          >
             {value}
           </div>
-
-        )
-      })}
-      </div>
+            )
+          })}
+        </div>
     </>
-  )
-}
+    )
+  }
 export default Square

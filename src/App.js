@@ -34,7 +34,7 @@ const App = () => {
     <>
       <h1>Treasure Hunt Game</h1>
 
-      <Square board={board}/>
+      <Square board={board} handleClick={handleClick}/>
 
 
     </>
